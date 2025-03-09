@@ -1,0 +1,41 @@
+<template>
+    <lightning-card title="grandparentOne" class="tree-container">
+        <div class="tree-layout">
+            <template if:true={showMessage}>
+                <p class="message-text">{message}</p>
+            </template>
+
+            <template if:false={showConnectButton}>
+                <p class="grandchildren-text">
+                    Your kid is married, you currently have {grandChildrenCount} grandchildren
+                </p>
+            </template>
+
+
+            <template if:false={showMessage}>
+                <div class="parent-container">
+                    <div class="parent-box">
+                        <p class="component-title">Parent 1</p>
+                        <template if:true={parentOne}>
+                            <c-parent-one record-id={recordId} parent={parentOne} is-married={isMarried}></c-parent-one>
+                        </template>
+                    </div>
+                    <div class="parent-box">
+                        <p class="component-title">Parent 2</p>
+                        <template if:true={parentTwo}>
+                            <c-parent-two parent={parentTwo}></c-parent-two>
+                        </template>
+                    </div>
+                </div>
+
+                <template if:true={showConnectButton}>
+                    <div class="slds-align_absolute-center slds-m-top_large">
+                        <lightning-button label="Connect" onclick={handleConnect} variant="brand" class="connect-button"></lightning-button>
+                    </div>
+                </template>
+
+              
+            </template>
+        </div>
+    </lightning-card>
+</template>

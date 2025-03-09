@@ -1,0 +1,11 @@
+<template>
+    <div class="parent-box">
+        <p class="parent-name">{parent.Name}</p>
+
+        <template if:true={isMarried}>
+            <div class="grandchild-container">
+                <c-grand-child onaddgrandchild={handleAddGrandchild}></c-grand-child>
+            </div>
+        </template>
+    </div>
+</template>

@@ -1,0 +1,60 @@
+:host {
+    display: block;
+    height: 100%; /* יתאים את הגובה ל-Container */
+}
+
+
+
+.tree-container {
+    background-color: #f4f6f9;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 450px;
+    height: 900px;
+    margin: 0 auto; 
+}
+
+.tree-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 15px;
+}
+
+.parent-box {
+    border: 1px solid #d8dde6;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 120px;
+}
+
+.component-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.connect-button {
+    font-size: 16px;
+}
+
+.grandchildren-text {
+    font-weight: bold;
+    color: #0070d2;
+}
+
+.message-text {
+    font-weight: bold;
+    color: #e50000;
+}
+
+
